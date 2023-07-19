@@ -1,44 +1,19 @@
-<div class="card" style="display: flex;">
+<h1 style="margin-top: -1rem;">Hairdressers</h1>
+<div class="card" style="display: flex;" *ngFor="let item of hairdressers ">
     <div class="row g-0">
       <div class="col-md-4">
-        <img src="assets/img/img1.jpg" class="img-fluid" alt="Resim" style="object-fit: cover; height: 100%;">
+        <img src="assets/img/{{item.imageUrl}}" class="img-fluid" alt="Resim">
       </div>
       <div class="col-md-8">
         <div class="card-body">
-          <h2 class="card-title">Oribe Canales</h2>
-          <p class="card-text">Professional Hairdresser</p>
-          <p class="card-text"><small class="text-muted">Oribe Canales, a renowned hairstylist, possesses 30 years of unrivaled experience, making him a true icon in the field. With exceptional talent and innovation, Oribe's artistry sets new standards, captivating clients worldwide. His visionary approach and commitment to excellence have solidified his position as a leader in the industry, inspiring countless professionals along the way.</small></p>
+          <h2 class="card-title">{{item.title}}</h2>
+          <p class="card-text">{{item.text}}</p>
+          <p class="card-description"><small class="text-muted">{{item.description}}</small></p>
           <button class="btn btn-sm btn-outline-primary">Get Appointment</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="card" style="display: flex;">
-    <div class="row g-0">
-      <div class="col-md-4">
-        <img src="assets/img/img2.jpg" class="img-fluid" alt="Resim" style="object-fit: cover; height: 100%;">
-      </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h2 class="card-title">Danny Garrity</h2>
-          <p class="card-text">Hairdresser</p>
-          <p class="card-text"><small class="text-muted">Danny Garrity is an experienced hairstylist known for his exceptional talent and dedication. With years of industry experience, Danny has honed his skills and mastered a wide range of techniques. His artistic vision and attention to detail allow him to create stunning hairstyles that perfectly complement his clients' features and personalities. Clients trust Danny for his professionalism, creativity, and ability to exceed expectations.</small></p>
-          <button class="btn btn-sm btn-outline-primary">Get Appointment</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="card" style="display: flex;">
-    <div class="row g-0">
-      <div class="col-md-4">
-        <img src="assets/img/img2.jpg" class="img-fluid" alt="Resim" style="object-fit: cover; height: 100%;">
-      </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h2 class="card-title">Danny Garrity</h2>
-          <p class="card-text">Hairdresser</p>
-          <p class="card-text"><small class="text-muted">Danny Garrity is an experienced hairstylist known for his exceptional talent and dedication. With years of industry experience, Danny has honed his skills and mastered a wide range of techniques. His artistic vision and attention to detail allow him to create stunning hairstyles that perfectly complement his clients' features and personalities. Clients trust Danny for his professionalism, creativity, and ability to exceed expectations.</small></p>
-          <button class="btn btn-sm btn-outline-primary">Get Appointment</button>
+          <img src="assets/logo/{{item.phoneUrl}}" alt="Logo" class="logo" style="margin-left: 15rem;">
+          <span class="phone-number">{{item.number}}</span>
+          <img src="assets/logo/{{item.instagramUrl}}" alt="Logo" class="logo">
+          <span class="instagram">{{item.instagram}}</span>
         </div>
       </div>
     </div>
