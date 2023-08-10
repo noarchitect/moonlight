@@ -129,7 +129,7 @@ export class BooknowComponent {
   }
 
   selectBarber(barber: any): void {
-
+    
     this.selectedBarber = barber;
     this.currentPage = 'barber';
   }
