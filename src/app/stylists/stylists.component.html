@@ -1,0 +1,40 @@
+<img src="assets/wallpaper/stylists.jpg" class="wp">
+<h1 style="margin-top: -1rem;">Stylists</h1>
+<div class="card" style="display: flex;" *ngFor="let item of stylists ">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="assets/stylist/{{item.imageUrl}}" class="img-fluid">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h2 class="card-title">{{item.title}}</h2>
+          <p class="card-text">{{item.text}}</p>
+          <p class="card-description"><small class="text-muted">{{item.description}}</small></p>
+          <button class="btn btn-sm btn-outline-primary" (click)="openModal(item)">Details</button>
+          <img src="assets/icon/{{item.phoneUrl}}" class="logo" style="margin-left: 15rem;">
+          <span class="phone-number">{{item.number}}</span>
+          <img src="assets/icon/{{item.instagramUrl}}" class="logo" alt="">
+          <span class="instagram">{{item.instagram}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-wrapper" *ngIf="isModalOpen" (click)="closeModal()">
+    <div class="modal-content" (click)="preventModalClose($event)">
+      <span class="close-button" (click)="closeModal()">&times;</span>
+      <div class="stylist-details">
+        <div class="stylist-image">
+          <img [src]="'assets/stylist/' + (selectedStylist?.imageUrl)" class="stylist-img">
+          <h3 class="stylist-name">{{selectedStylist?.title}}</h3>
+          <hr class="line">
+        </div>
+        <div class="media-section">
+          <div class="media-item-container" *ngFor="let post of selectedStylist?.posts">
+            <img *ngIf="post.image" [src]="'assets/posts/' + post.image" class="media-item">
+            <video *ngIf="post.video" [src]="'assets/posts/' + post.video" class="media-item" controls></video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

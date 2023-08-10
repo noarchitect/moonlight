@@ -1,13 +1,103 @@
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: transparent;
+  color: white;
+}
+
 .navbar-nav {
-    display: flex;
-    align-items: center;
-  }
-  
-  .navbar-nav .profile-logo {
-    margin-left: auto;
-    margin-right: -6rem;
+  top: 0;
+  gap: 10px;
+  flex-grow: 1;
+  flex-direction: row;
+  height: 100%;
+}
+
+.nav-item {
+  height: 100%;
+  top: 0%;
+  flex-grow: 1;
+  white-space: nowrap;
+
+}
+
+.nav-link {
+  height: 100%;
+  color: white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor:pointer;
+}
+
+.img-btn {
+  border-radius: 5px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  width: 32px;
+  height: 32px;
+  margin: 20px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-link:hover{
+  color: yellowgreen;
+}
+
+@media screen and (max-width: 720px) {
+  .navbar {
+    justify-content: center;
   }
 
-  .navbar {
-    height: auto;
+  .nav-link, .img-btn {
+    display: none;
+    overflow: hidden;
+    max-width: calc(100% - 80px);
   }
+  .moonlight-button {
+    display: flex;
+    width: 100%;
+    overflow: visible;
+    transform: translate(-50%, center);
+  }
+  
+}
+
+.cart-icon-container {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background-color: blueviolet;
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+}

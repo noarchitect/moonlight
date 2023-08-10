@@ -1,0 +1,59 @@
+.wp{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.icon {
+  width: 80px;
+  height: 80px;
+}
+
+.footer-box {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: fixed;
+  bottom: 30px;
+  left: 40px;
+  right: 40px;
+  height: 200px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 9999;
+}
+
+.footer-box-section {
+  display: flex;
+  max-width: 33%;
+  align-items: center;
+}
+
+.footer-box-section:not(:last-child) {
+  margin-right: 20px;
+}
+
+.footer-box-icon {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.text {
+  font-size: 18px;
+  color: white;
+}
+
+.footer-box-button {
+  padding: 8px 16px;
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

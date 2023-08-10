@@ -1,0 +1,267 @@
+.wp{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.main-content {
+  top: 0px;
+  left: 0px;
+  width: 50%;
+  height: 100%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  position: fixed;
+}
+
+.location-menu {
+  top: 0px;
+  left: 0px;
+  width: 50%;
+  height: 100%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  position: fixed;
+}
+
+.line {
+  width: 500px;
+  border: 1px solid black;
+  margin-bottom: 30px;
+}
+
+.header  {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.location-options {
+  display: flex;
+  flex-direction: column;
+}
+
+.location {
+  width: 100%;
+  height: calc(100vh / 4);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 0 20px;
+  border-radius: 5px;
+  border-bottom: 1px solid #ddd;
+}
+
+.location:first-child {
+  border-top: 1px solid #ddd;
+}
+
+.location:hover {
+
+  background-color: rgba(201, 94, 228, 0.1);
+}
+
+.location-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: auto;
+}
+
+.location-button {
+  background: none;
+  border: none;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+
+.services-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: calc(100vh / 6);
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  font-size: 18px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.services-menu:first-child {
+  border-top: 1px solid #ddd;
+}
+
+.services-menu:hover {
+  background-color: rgba(180, 247, 92, 0.1);
+}
+
+.services-btn {
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.services {
+  font-size: 18px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.service-menu {
+  font-size: 18px;
+  margin-right: 10px;
+  font-weight: bold;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: calc(100vh / 11);
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.service-menu:first-child {
+  border-top: 1px solid #ddd;
+}
+
+.service-menu:hover {
+  background-color: rgba(180, 247, 92, 0.1);
+}
+
+.service-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.service {
+  font-size: 18px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.back {
+  position: absolute;
+  height: 32px;
+  width: 32px;
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.service-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: calc(100vh / 11);
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.service-menu:first-child {
+  border-top: 1px solid #ddd;
+}
+
+.service-menu:hover {
+  background-color: rgba(180, 247, 92, 0.1);
+}
+
+.service-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.service {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.hairdresser-options {
+  display: flex;
+  flex-direction: column;
+  }
+  .hairdresser-option {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  height: calc(100vh / 4);
+  }
+  
+  .hairdresser-option:first-child {
+  border-top: 1px solid #ddd;
+  }
+  
+  .hairdresser-option:hover {
+  background-color: rgba(180, 247, 92, 0.1);
+  }
+  
+  .hairdresser-button {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  }
+  
+  .hairdresser-image {
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+    object-fit: cover;
+    object-position: center top;
+  }
+  
+
+
+  .hairdresser-name {
+  font-size: 18px;
+  font-weight: bold;
+  }

@@ -7,19 +7,25 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy":"ng build -sm -ec -bh/job/&ngh --no-silent"
+    "deploy": "ng build -sm -ec -bh/job/&ngh --no-silent"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "^16.1.0",
+    "@angular/cdk": "^16.1.7",
     "@angular/common": "^16.1.0",
     "@angular/compiler": "^16.1.0",
     "@angular/core": "^16.1.0",
+    "@angular/flex-layout": "^15.0.0-beta.42",
     "@angular/forms": "^16.1.0",
+    "@angular/material": "^16.1.7",
     "@angular/platform-browser": "^16.1.0",
     "@angular/platform-browser-dynamic": "^16.1.0",
     "@angular/router": "^16.1.0",
+    "@types/google.maps": "^3.53.6",
+    "@types/googlemaps": "^3.43.3",
     "bootstrap": "^5.0.2",
+    "firebase": "^10.1.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"

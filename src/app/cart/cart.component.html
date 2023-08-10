@@ -1,0 +1,46 @@
+<img src="assets/wallpaper/gecici.jpg" class="wp">
+<div class="product-card" *ngFor="let item of cartItems">
+    <div class="image-section">
+      <label class="checkbox-label">
+        <input type="checkbox" class="product-checkbox" (change)="toggleCartItem(item)">
+        <span class="checkbox-custom"></span>
+        <button class="delete-button" (click)="removeCartItem(item)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </label>
+      <img src="../../assets/products/{{item.img}}">
+    </div>
+    <div class="info-section">
+      <div class="info-details">
+        <h3 class="product-brand">{{ item.brand }}</h3>
+        <p class="product-model">{{ item.model }}</p>
+        <div *ngIf="item.showTextbox" class="quantity-controls">
+          <ng-container *ngIf="item.quantity === 1; else deleteBlock">
+            <button class="delete-button" (click)="removeCartItem(item)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </ng-container>
+          <ng-template #deleteBlock>
+            <button (click)="decrementQuantity(item)">-</button>
+          </ng-template>
+          <input class="textbox" type="text" [(ngModel)]="item.quantity" (change)="quantityChanged(item)">
+          <button (click)="incrementQuantity(item)">+</button>
+        </div>
+    </div>
+    </div>
+      <div class="footer">
+        <p class="product-price">{{ item.price | currency:'$' }}</p>
+      </div> 
+      <div class="selected-products-details" *ngIf="selectedCheckboxItems.length > 0">
+        <h5 class="title">Selected Products</h5>
+        <ul>
+          <li class="text" *ngFor="let selectedItem of selectedCheckboxItems">
+            {{ selectedItem.brand }} - {{ selectedItem.model }}
+            x{{ selectedItem.quantity }}
+          </li>
+        </ul>
+        <div class="selected-footer">
+          <div class="total-price">Price: {{ calculateTotalPrice() | currency:'$' }}</div>
+          <button class="buy-button" (click)="buySelectedItems()">Buy</button>
+        </div>
+      </div>

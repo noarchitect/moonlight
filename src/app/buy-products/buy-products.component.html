@@ -1,0 +1,17 @@
+<img src="assets/wallpaper/gecici.jpg" class="wp">
+<div class="product-list">
+    <div class="product-item" *ngFor="let item of products">
+      <div class="product-card">
+        <img class="product-image" src="../../assets/products/{{item.img}}">
+        <div class="product-details">
+          <h3 class="product-brand">{{ item.brand }}</h3>
+          <p class="product-model">{{ item.model }}</p>
+          <p class="product-price">{{ item.price | currency:'$'}}</p>
+        </div>
+        <div class="product-footer">
+          <button class="add-to-cart-button" (click)="addToCart(item)">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

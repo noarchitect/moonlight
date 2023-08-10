@@ -1,0 +1,74 @@
+<img src="assets/wallpaper/gecici.jpg" class="wp">
+
+<div class="modal-wrapper main-modal" *ngIf="isModalOpen" (click)="closeModal()">
+  <div class="main-content" (click)="preventModalClose($event)">
+    <span class="close-button" (click)="closeModal()">&times;</span>
+    <div class="book-now-content">
+      <div class="header">
+        <h2 class="title">M O O N L İ G H T&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S A L O O N</h2>
+        <hr class="line">
+      </div>
+      
+      <ng-container *ngIf="currentPage === 'location'">
+        <h2>Select a Location</h2>
+        <div class="location-options">
+          <div *ngFor="let location of ['Eryaman', 'Umitkoy', 'Cankaya']" class="location" (click)="openSubPage('services', location)">
+            <span class="location-name">{{ location }}</span>
+            <button class="location-button">&rarr;</button>
+          </div>
+        </div>
+      </ng-container>
+      
+      <ng-container *ngIf="currentPage === 'services'">
+        <div class="services-menu" *ngFor="let option of serviceOptions" (click)="openSubPage(option.name, currentLocation)">
+          {{ option.name }}
+          <button class="services-btn">&rarr;</button>
+        </div>
+        <img src="../../assets/icon/return.png" class="back" (click)="goBack()">
+      </ng-container>
+
+      <ng-container *ngIf="currentPage === 'Haircuts'">
+        <div class="service-menu" *ngFor="let option of pagesContentMap['Haircuts'].content" (click)="openSubPage(option.label, currentLocation)">
+          <span class="service">{{ option.label }}</span>
+          <span class="price">{{ option.price }} $</span>
+        </div>
+        <img src="../../assets/icon/return.png" class="back" (click)="goBack()">
+      </ng-container>
+
+      <ng-container *ngIf="currentPage === 'Color'">
+        <div class="service-menu" *ngFor="let option of pagesContentMap['Color'].content" (click)="openSubPage(option.label)">
+          <span class="service">{{ option.label }}</span>
+          <span class="price">{{ option.price }} $</span>
+        </div>
+        <img src="../../assets/icon/return.png" class="back" (click)="goBack()">
+      </ng-container>
+
+      <ng-container *ngIf="currentPage === 'Color and Cut Combo'">
+        <div class="service-menu" *ngFor="let option of pagesContentMap['Color and Cut Combo'].content" (click)="openSubPage(option.label)">
+          <span class="service">{{ option.label }}</span>
+          <span class="price">{{ option.price }} $</span>
+        </div>
+        <img src="../../assets/icon/return.png" class="back" (click)="goBack()">
+      </ng-container>
+
+      <ng-container *ngIf="currentPage === 'Everything Else'">
+        <div class="service-menu" *ngFor="let option of pagesContentMap['Everything Else'].content" (click)="openSubPage(option.label)">
+          <span class="service">{{ option.label }}</span>
+          <span class="price">{{ option.price }} $</span>
+        </div>
+        <img src="../../assets/icon/return.png" class="back" (click)="goBack()">
+      </ng-container>
+      
+      <ng-container *ngIf="currentPage === 'barber'">
+        <div class="hairdresser-options">
+          <div *ngFor="let barber of allBarbers" class="hairdresser-option" (click)="selectBarber(barber)">
+            <img src="../../assets/stylist/{{ barber.image }}" class="hairdresser-image">
+            <span class="hairdresser-name">{{ barber.name }}</span>
+          </div>
+        </div>
+        <img src="../../assets/icon/return.png" class="back" (click)="goBack()">
+      </ng-container>
+    
+    </div>
+  </div>
+</div>
